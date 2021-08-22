@@ -19,7 +19,7 @@
 
 ;; load handler
 (def handler
-  (let [[_ handler-ns handler-fn] (re-find #"(.*)\.(.*)$" handler-name)]
+  (let [[handler-ns handler-fn] (str/split handler-name #"/")]
     (try
       (require (symbol handler-ns))
       (resolve (symbol handler-ns handler-fn))
