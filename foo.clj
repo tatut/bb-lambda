@@ -1,5 +1,8 @@
 (ns foo)
 
 (defn bar [event ctx]
-  {:success true
-   :jotain "ihan muuta"})
+  (if (:virhe event)
+    (throw (RuntimeException. "ei onnistu"))
+    (merge event
+           {:success true
+            :jotain "ihan muuta"})))
