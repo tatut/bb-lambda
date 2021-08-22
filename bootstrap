@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "stargin bb"
+bb -cp $LAMBDA_TASK_ROOT bootstrap.clj
