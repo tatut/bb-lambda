@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo "stargin bb"
 ${LAMBDA_RUNTIME_DIR}/bb -cp $LAMBDA_TASK_ROOT ${LAMBDA_RUNTIME_DIR}/bootstrap.clj
