@@ -1,0 +1,26 @@
+service: bb-lambda-serverless-example
+
+provider:
+  name: aws
+  stage: dev
+  region: eu-central-1
+  ecr:
+    images:
+      appimage:
+        path: ./
+
+functions:
+  hello:
+    image:
+      name: appimage
+      command:
+        - hello/hello
+      entryPoint:
+        - '/lambda-entrypoint.sh'
+  goodbye:
+    image:
+      name: appimage
+      command:
+        - hello/goodbye
+      entryPoint:
+        - '/lambda-entrypoint.sh'
