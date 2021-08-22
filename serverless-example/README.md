@@ -4,7 +4,7 @@ Simple example of babashka Clojure lambdas with dockerized runtime.
 
 ## Deploying
 
-- install [serverless](serverless.com)
+- install [serverless](https://serverless.com/)
 - run `sls deploy`
 
 The first sls deployment takes a long time as the docker layers are created and pushed to ECR.
